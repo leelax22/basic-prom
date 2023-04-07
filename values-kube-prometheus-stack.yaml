@@ -3137,7 +3137,7 @@ prometheus:
       image: "quay.io/thanos/thanos:v0.27.0"
       objectStorageConfig:
         key: objstore.yml
-        name: objstore-secret
+        name: objsto-secret
       version: v0.27.0
 
     ## Containers allows injecting additional containers. This is meant to allow adding an authentication proxy to a Prometheus pod.
