@@ -2977,7 +2977,7 @@ prometheus:
     storageSpec:
       volumeClaimTemplate:
         spec:
-          storageClassName: managed-csi
+          storageClassName: azureblob-nfs-standard
           accessModes: ["ReadWriteOnce"]
           resources:
             requests:
@@ -3007,6 +3007,9 @@ prometheus:
     ## port to 2379 and allow etcd scraping provided it is running on all Kubernetes master nodes
     ##
     additionalScrapeConfigs: []
+    # - job_name: sloop
+    #   static_configs:
+    #     - targets: ['localhost:8080']
     # - job_name: kube-etcd
     #   kubernetes_sd_configs:
     #     - role: node
